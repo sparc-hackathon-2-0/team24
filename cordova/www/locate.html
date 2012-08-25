@@ -1,0 +1,15 @@
+<div class="container">
+<form class="form-horizontal">
+  <input type="search" ng-model="name" placeholder="name" autofocus></input>
+  <button class="btn btn-primary" ng-click="find()"><i class="icon-search icon-white"></i>&nbsp;</button>
+</form>
+<ul style="list-style:none;">
+  <li ng-repeat="place in places" style="border-bottom: 1px solid gray;">
+    <span class="badge" style="float: right;">{{place.similarity | number:2}}</span>
+    <h3><a href="http://maps.google.com/maps?q={{place.latitude}},{{place.longitude}}" target="_blank">{{place.name}}</a></h3>
+    <a style="float:right;" href="http://maps.google.com/maps?q={{place.latitude}},{{place.longitude}}" target="_blank"><i class="icon-map-marker"></i></a>
+    <p>{{place.address}}; {{place.locality}}, {{place.region}}  {{place.postcode}}</p>
+    <p>Phone: <a href="#" ng-click="dial(place.tel)">{{place.tel}}</a></p>
+  </li>
+</ul>
+</div>

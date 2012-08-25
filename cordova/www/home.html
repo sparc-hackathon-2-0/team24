@@ -1,0 +1,16 @@
+<ul style="list-style: none;">
+  <li ng-repeat="deal in deals" style="border-bottom: 1px solid gray;">
+    <span class="badge badge-success" style="float:right;">$ {{deal.price}}</span>
+    <h2>
+      <a href={{deal.click_url}} target="_blank">{{deal.title}}</a></h2>
+    <div class="span2">
+      <a href={{deal.click_url}} target="_blank">
+        <img src={{deal.ad_unit_url_320x50}} alt={{deal.place_name}}></img></a>
+    </div>
+    <p style="font-size: .9em;margin-top:5px;">{{deal.description}}</p>
+    <p>Expires: {{deal.expires_local | date}}</p>
+  </li>
+</ul>
+<div class="span12" style="text-align: center;">
+<button class="btn btn-primary btn-large" ng-click="getDeals()"><i  class="icon-refresh"></i>&nbsp;&nbsp;Reload</button>
+</div>
