@@ -1,12 +1,13 @@
 <ul style="list-style: none;">
   <li ng-repeat="deal in deals" style="border-bottom: 1px solid gray;">
-    <h2 style="text-align: center;">$ {{deal.price}}</h2>
-    <h2>{{deal.title}}</h2>
+    <span class="badge badge-success" style="float:right;">$ {{deal.price}}</span>
+    <h2>
+      <a href={{deal.click_url}} target="_blank">{{deal.title}}</a></h2>
     <div class="span2">
-      <a href={{deal.click_url}}>
+      <a href={{deal.click_url}} target="_blank">
         <img src={{deal.ad_unit_url_320x50}} alt={{deal.place_name}}></img></a>
     </div>
-    <p>{{deal.description}}</p>
+    <p style="font-size: .9em;margin-top:5px;">{{deal.description}}</p>
     <p>Expires: {{deal.expires_local | date}}</p>
   </li>
 </ul>
