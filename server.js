@@ -40,4 +40,4 @@ app.router.post('/api/locate', function(){
 });
 
 
-app.start(3000);
+app.start(process.env.PORT);
