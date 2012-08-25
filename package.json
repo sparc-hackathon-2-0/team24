@@ -1,10 +1,11 @@
 {
-  "name": "team24",
+  "name": "popdeals",
   "version": "0.0.0",
   "description": "A iphone deals location app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "server.js"
   },
   "repository": "",
   "author": "Tom Wilson",
@@ -14,5 +15,9 @@
     "union": "~0.3.4",
     "ecstatic": "~0.1.6",
     "factual-api": "~1.0.3"
+  },
+  "subdomain": "popdeals",
+  "engines": {
+    "node": "0.8.x"
   }
 }
