@@ -30,7 +30,6 @@ app.router.post('/api/deals', function(){
 
 app.router.post('/api/locate', function(){
   var self = this, loc = this.req.body;
-  console.log(loc);
   //, filters: {source_namespace: { $eq: "groupon"}}
   factual.get('/places/geocode', {geo: {$point: [loc.lat, loc.lng]}}, function(err, res){
     console.log(res.data);
@@ -38,7 +37,7 @@ app.router.post('/api/locate', function(){
     console.log(values);
     factual.get('/places/resolve', {debug: true, values: values}, function (error, res) {
       self.res.json(res.data);
-      //console.log(res.data);
+      console.log(res.data[0]);
     });      
   });
 });
