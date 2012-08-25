@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="app">
   <head>
     <title>PopDeals</title>
     <meta charset="utf-8">
@@ -7,29 +7,23 @@
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/angular-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+  
   </head>
   <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <a class="brand" href="#">PopDeals</a>
-      </div>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container" ng-controller="NavCtrl">
+          <a class="brand" href="#">PopDeals</a>
+          <ul class="nav">
+            <li><a href="#"><i class="icon-home"></i>&nbsp;&nbsp;Deals</a></li>
+            <li><a href="#/locate"><i class="icon-search"></i>&nbsp;&nbsp;Locate</a></li>
+          </ul>
+        </div>
+      </div>      
     </div>
-    <div class="span12" style="text-align: center;color: lightblue;" >
-      <h2>Welcome to <em>PopDeals!</em></h2>
-    </div>
-    <div class="span4 offset2" >
-      <ul>
-        <li>Get the Deals Near You</li>
-        <li>Share the Deals</li>
-        <li>No Sign In Required</li>
-      </ul>
-    </div>
-    <div class="span12" style="text-align: center;margin-top: 100px;">
-    <button class="btn btn-primary btn-large"><i  class="icon-off"></i>&nbsp;&nbsp;Check In</button>
-    
-            
-    </div>
+    <div ng-view></div>
   </body>
 </html>

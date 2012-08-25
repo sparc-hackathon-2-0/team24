@@ -1,0 +1,11 @@
+<form class="form-horizontal">
+  <input type="search" ng-model="name" placeholder="name"></input>
+  <button class="btn btn-primary" ng-click="find()">Find</button>
+</form>
+<ul>
+  <li ng-repeat="place in places">
+    <h3>{{place.name}}</h3>
+    <p>{{place.address}}</p>
+    <p>{{place.locality}}, {{place.region}}  {{place.postcode}}</p>
+  </li>
+</ul>
