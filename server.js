@@ -1,6 +1,9 @@
 var flatiron = require('flatiron'),
   ecstatic = require('ecstatic'),
-  config = require('./config'),
+  config = {
+      key: 'DALSQ9j0KDIoJjBns202xTisqSkqPCbTzLT3e5Y0', 
+      secret: 'ZWn5LRa3wsqXXsRPoySNYA455Lvfngs3n4lO4CW3'
+  },
   app = flatiron.app;
 
 var Factual = require('factual-api');
