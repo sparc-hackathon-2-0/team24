@@ -4,6 +4,7 @@ var flatiron = require('flatiron'),
   app = flatiron.app;
 
 var Factual = require('factual-api');
+console.log(config);
 var factual = new Factual(config.key, config.secret);
 
 app.use(flatiron.plugins.http);
