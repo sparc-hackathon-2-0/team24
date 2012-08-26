@@ -9,7 +9,7 @@
     <h3><a href="http://maps.google.com/maps?q={{place.latitude}},{{place.longitude}}" target="_blank">{{place.name}}</a></h3>
     <a style="float:right;" href="http://maps.google.com/maps?q={{place.latitude}},{{place.longitude}}" target="_blank"><i class="icon-map-marker"></i></a>
     <p>{{place.address}}; {{place.locality}}, {{place.region}}  {{place.postcode}}</p>
-    <p>Phone: <a href="#" ng-click="dial(place.tel)">{{place.tel}}</a></p>
+    <p>Phone: <a href="tel:{{place.tel}}">{{place.tel}}</a></p>
   </li>
 </ul>
 </div>
